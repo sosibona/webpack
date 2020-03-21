@@ -1,0 +1,112 @@
+.modal-form {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px 10px rgba(12, 124, 122, 0.4);
+  display: none;
+
+  &__error {
+    width: 320px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: red;
+    padding: 5px;
+  }
+
+  &__icon-close {
+    color: #999;
+    font-size: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+
+
+.create-event {
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
+
+  & input {
+    border: none;
+  }
+
+  &__name {
+  border-bottom: 2px solid #1a73e9 !important;
+  margin: 50px auto;
+  margin-top: 0px;
+  display: block;
+  outline: none;
+  width: 320px;
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;  
+  }
+
+  &__icon-clock {
+    font-size: 24px;
+    color: #999;
+  }
+
+  &__additional {
+    display: flex;
+    align-items: center;
+  }
+
+  &__additional-info {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  &__additional-info-icon {
+    color: #999;
+    margin-right: 5px;
+  }
+
+  &__additional-info-text {
+    border: none;
+    resize: none;
+    padding: 0 10px;
+
+    &:focus {
+      outline: 2px solid #1a73e9aa;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  &__button {
+    width: 120px;
+    height: 40px;
+    background-color: #1a73e9;
+    border: none;
+    margin-top: 10px;
+    margin-left: auto;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}

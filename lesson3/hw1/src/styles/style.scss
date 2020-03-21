@@ -1,0 +1,89 @@
+@import "popup.scss";
+@import "header.scss";
+@import "calendarsheet.scss";
+@import "deleteEvent.scss";
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+.button {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  background-color: #fff;
+  margin: 0 10px;
+  box-shadow: 1px 1px 1px 0px rgba(12, 124, 122, 0.5);
+  font-weight: 700;
+  color: #999;
+}
+
+.event{
+  background-color: #47d6dc;
+  height: inherit;
+  width: 95%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid blue;
+  cursor: pointer;
+
+  &:hover{
+    z-index: 6;
+  }
+
+  & span {
+    text-align: left;
+    margin-left: 8px;
+    margin-top: 1px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+
+  &__description {
+    margin-top: 10px !important;
+    color: #999;
+  }
+}
+
+.line-now {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: red;
+  top: -20px;
+  left: 0;  
+  z-index: 6;
+
+  &__time {
+    position: absolute;
+    width: 45px;
+    height: 16px;
+    bottom: -8px;
+    left: -45px;
+    background-color: red;
+    color: #fff;
+  }
+}
+.change-color {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+
+
+
+
+
+//
