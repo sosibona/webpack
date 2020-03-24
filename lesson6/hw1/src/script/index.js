@@ -16,14 +16,12 @@ import { greenwichTime } from './greenwichTime.js'
 import { setItem, getItem } from './storage.js';
 import { getEvents } from './tasks.js';
 import '../index.scss';
-// import { showSetting } from './changeColor.js'
 
 renderWeek();
 renderSidebar();
 renderDateForWeek(new Date());
 renderDayCell(new Date());
 getCurrentMonth();
-createEvent();
 addClassCurentDate();
 startLine()
 greenwichTime(new Date());
