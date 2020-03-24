@@ -6,9 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build:scripts": "webpack -p",
-    "clean": "rm -rf ./dist",
-    "build": "npm-run-all clean build:*",
+    "build": "webpack -p",
     "watch": "webpack -d --devtools eval-source-maps -w"
   },
   "keywords": [],
@@ -19,6 +17,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
     "html-webpack-plugin": "^4.0.1",
     "jest": "^25.1.0",
