@@ -1,4 +1,4 @@
-import { renderListItems, listElem } from './render.js';
+import { renderListItems, listElem } from '../index.js';
 import { deleteTask, getTasksList }  from './tasksGateway.js'
 import {setItem, getItem} from './storage.js'
 

@@ -1,5 +1,5 @@
 import {setItem, getItem} from './storage.js'
-import { renderListItems, listElem } from './render.js';
+import { renderListItems, listElem } from '../index.js';
 import { createTask, getTasksList } from './tasksGateway.js';
 
 const btnCreateTask = document.querySelector('.create-task-btn');
