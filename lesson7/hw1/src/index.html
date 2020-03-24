@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="calendar">
+    <div class="modal-delete">
+      <span class="modal-delete__icon-close"><i class="far fa-times-circle"></i></span>
+      <div class="modal-delete__event">
+        <i class="modal-delete__icon-title far fa-calendar-alt"></i><h1 class="modal-delete__title"></h1>
+      </div>
+      <div class="modal-delete__data">
+        <i class="modal-delete__icon-data far fa-clock"></i><span class="modal-delete__time"></span>
+      </div>
+      <div class="modal-delete__description">
+        <i class="modal-delete__icon-description far fa-question-circle"></i><span class="modal-delete__info"></span>
+      </div>
+      <button class="modal-delete__btn-delete-event">Delete</button>
+      <div class="change-color">
+        <input type="color" id="eventColor" name="eventColor" value="#47d6dc">
+        <button class="header-btn modal-delete__btn-change-color">Change color</button>
+      </div>
+    </div>
+    <div class="modal-form">
+      <span class="modal-form__icon-close"><i class="far fa-times-circle"></i></span>
+      <span class="modal-form__error"></span>
+      <form class="create-event">
+        <input type="text" name="nameOfEvent"  id="name" class="create-event__name" placeholder="Event" required>
+        <div class="create-event__time">
+            <i class="create-event__icon-clock far fa-clock"></i>
+            <input class="calendar-data" type="date" id="date" name="data"
+            min="2020-02-20" max="2040-12-31" required>
+            <input class="startTime" type="time" id="startTime" name="startEvent"
+            min="00:00" max="24:00" step="900" required>
+            <input class="endTime" type="time" id="endTime" name="endEvent"
+            min="00:00" max="24:00" step="900" required>
+        </div>
+        <div class="create-event__additional-info">
+          <i class="create-event__additional-info-icon fas fa-stream"></i>
+          <textarea class="create-event__additional-info-text" name="description" id="info" cols="30" rows="5" placeholder="Additional informations"></textarea>
+        </div>
+        <div class="create-event__additional">
+          <input type="color" id="event" name="eventColor" value="#47d6dc">
+          <button class="create-event__button" type="submit">Save</button>
+        </div>
+    </form>
+    <!-- </div> -->
+    </div>
+    <header class="header">
+      <div class="header__top-info">
+        <button class="button header__create">
+          <svg width="36" height="36" viewBox="0 0 36 36">
+            <path fill="#34A853" d="M16 16v14h4V20z"></path>
+            <path fill="#4285F4" d="M30 16H20l-4 4h14z"></path>
+            <path fill="#FBBC05" d="M6 16v4h10l4-4z"></path>
+            <path fill="#EA4335" d="M20 16V6h-4v14z"></path>
+            <path fill="none" d="M0 0h36v36H0z"></path>
+          </svg>Create
+        </button>
+        <button class="button header__today">Today</button>
+        <span><i class="header__angle fas fa-angle-left angle-left"></i></span>
+        <span><i class="header__angle fas fa-angle-right angle-rigth"></i></span>
+        <span class="header__month"></span>
+        <span class="header__setting-icon"><i class="fas fa-sliders-h"></i></span>
+        <div class="header__setting switch-setting">
+          <div>
+            <input type="color" id="window" name="window" value="#ffffff">
+            <label for="window">Main Window </label>
+          </div>
+          <div>
+            <input type="color" id="header" name="header" value="#ffffff">
+            <label for="header">Header</label>
+          </div>
+          <div>
+            <input type="color" id="event" name="event" value="#47d6dc">
+            <label for="event">Events</label>
+          </div>
+          <div>
+            <input type="color" id="borderEvent" name="borderEvent" value="#0000ff">
+            <label for="borderEvent">Border Events</label>
+          </div>
+          <div>
+            <input type="color" id="textEvents" name="textEvents" value="#000000">
+            <label for="textEvents">Text Events</label>
+          </div>
+          <div class="header__setting-btn">
+            <button class="header-btn btn-setting">Save</button>
+            <button class="header-btn btn-setting-default">Default</button>
+          </div>
+        </div>
+      </div>
+      <nav class="navigation">
+        <div class="week">
+          <span class="navigation__days">Mon</span>
+          <span class="navigation__days">Thu</span>
+          <span class="navigation__days">Wen</span>
+          <span class="navigation__days">Tue</span>
+          <span class="navigation__days">Fri</span>
+          <span class="navigation__days">Sat</span>
+          <span class="navigation__days">Sun</span>
+        </div>
+        <div class="date-of-month">
+        </div>
+        <span class="greenwich-zone"></span>
+      </nav>
+    </header>
+    <main class="days">
+      <aside class="time">
+      </aside>
+      <section class="current-week">
+      </section>
+    </main>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
