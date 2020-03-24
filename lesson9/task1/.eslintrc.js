@@ -1,7 +1,7 @@
 module.exports = {
     extends: 'eslint-config-airbnb-base',
     "rules": {
-        'no-console': 2,
+        'no-console': 0,
     },
     parserOptions: {
         ecmaVersion: 10,
