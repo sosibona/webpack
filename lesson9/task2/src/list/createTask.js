@@ -11,7 +11,7 @@ export function createNewTask() {
 
   getTextFromInput.value = '';
 
-  const newTask ={
+  const newTask = {
     text: inputValue,
     dateCreate: new Date(),
     done: false,
